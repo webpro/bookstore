@@ -1,0 +1,18 @@
+types: ./graphql/schema/bookstore.gql
+
+permissions:
+  - operation: '*'
+
+functions:
+  facebookAuthentication:
+    handler:
+      code:
+        src: ./graphql/functions/facebookAuthentication.js
+    type: resolver
+    schema: ./graphql/schema/facebookAuthentication.gql
+  loggedInUser:
+    handler:
+      code:
+        src: ./graphql/functions/loggedInUser.js
+    type: resolver
+    schema: ./graphql/schema/loggedInUser.gql

@@ -1,0 +1,8 @@
+mutation UpsertLikeMutation($id: ID!, $bookId: ID!, $userId: ID!, $liked: Boolean!) {
+  updateOrCreateLike(
+    update: { id: $id, bookId: $bookId, userId: $userId, liked: $liked }
+    create: { bookId: $bookId, userId: $userId, liked: $liked }
+  ) {
+    id
+  }
+}

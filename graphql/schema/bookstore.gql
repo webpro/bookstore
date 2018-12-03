@@ -1,0 +1,42 @@
+type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type User @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  facebookUserId: String @isUnique
+  email: String
+  firstName: String
+  likes: [Like!]! @relation(name: "UserLikes")
+}
+
+type Book @model {
+  id: ID! @isUnique
+  title: String
+  author: Author @relation(name: "AuthorBooks")
+  likes: [Like!]! @relation(name: "BookLikes")
+}
+
+type Author @model {
+  id: ID! @isUnique
+  name: String!
+  books: [Book!]! @relation(name: "AuthorBooks")
+}
+
+type Like @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  liked: Boolean!
+  user: User @relation(name: "UserLikes")
+  book: Book @relation(name: "BookLikes")
+}

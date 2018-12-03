@@ -1,0 +1,19 @@
+query allBooks {
+  allBooks {
+    id
+    title
+    author {
+      name
+    }
+    likes {
+      id
+      liked
+      user {
+        id
+      }
+    }
+    _likesMeta(filter: { liked: true }) {
+      count
+    }
+  }
+}

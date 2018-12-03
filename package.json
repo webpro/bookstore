@@ -1,0 +1,44 @@
+{
+  "name": "bookstore",
+  "version": "1.0.0",
+  "description": "Bookstore",
+  "scripts": {
+    "dev": "node -r dotenv/config server",
+    "build": "next build",
+    "start": "NODE_ENV=production node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webpro/bookstore.git"
+  },
+  "author": "webpro",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/webpro/bookstore/issues"
+  },
+  "homepage": "https://github.com/webpro/bookstore#readme",
+  "dependencies": {
+    "@material-ui/core": "^3.6.2",
+    "@material-ui/icons": "^3.0.1",
+    "@material/react-list": "^0.7.0",
+    "@zeit/next-sass": "^1.0.1",
+    "apollo-boost": "^0.1.22",
+    "babel-plugin-import-graphql": "^2.6.2",
+    "devcert": "^1.0.0",
+    "dotenv": "^6.2.0",
+    "dotenv-webpack": "^1.5.7",
+    "express": "^4.16.4",
+    "graphcool-lib": "^0.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "jss": "^9.8.7",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.6.3",
+    "react-apollo": "^2.3.1",
+    "react-dom": "^16.6.3",
+    "react-jss": "^8.6.1",
+    "styled-jsx": "^3.1.2"
+  }
+}

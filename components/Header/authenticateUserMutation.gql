@@ -1,0 +1,5 @@
+mutation AuthenticateUserMutation($facebookToken: String!) {
+  authenticateUser(facebookToken: $facebookToken) {
+    token
+  }
+}
