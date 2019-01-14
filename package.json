@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "node -r dotenv/config server",
     "build": "next build",
+    "now-build": "next build",
     "start": "NODE_ENV=production node server"
   },
   "repository": {
@@ -33,7 +34,7 @@
     "graphql-tag": "^2.10.0",
     "isomorphic-unfetch": "^3.0.0",
     "jss": "^9.8.7",
-    "next": "^7.0.2",
+    "next": "^8.0.0-canary.6",
     "node-sass": "^4.11.0",
     "react": "^16.6.3",
     "react-apollo": "^2.3.1",
